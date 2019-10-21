@@ -24,9 +24,9 @@
             </div>
             <div class="blank"></div>
             <div class="machines-grid">
-                <div class="machines-col machines-col-1" v-for="area in machineAreas">
+                <div class="machines-col machines-col-1" v-for="(area,index) in machineAreas" :key="index">
                     <ul>
-                        <li v-for="row in machineRows(area)">
+                        <li v-for="(row,iid) in machineRows(area)" :key="iid">
                             <machine-instance :state="item.state" :mid="item.id" v-for="item in row" :key="item.id">
                             </machine-instance>
                         </li>

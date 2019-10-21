@@ -1,6 +1,6 @@
 <template>
     <ul class="pagination">
-        <li v-for="num in pagingResult" @click="goto(num)" :class="[num===currentPage?'selected':'']">
+        <li v-for="(num,index) in pagingResult" :key="index" @click="goto(num)" :class="[num===currentPage?'selected':'']">
             <div v-if="typeof num === 'number'">
                 {{num}}
             </div>

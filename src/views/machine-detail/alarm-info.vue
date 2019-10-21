@@ -11,7 +11,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="item in warnData">
+                <tr v-for="(item,index) in warnData" :key="index">
                     <td>{{item.num}}</td>
                     <td>{{item.alarmType}}</td>
                     <td>{{item.alarmTime}}</td>

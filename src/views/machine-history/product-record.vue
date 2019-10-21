@@ -12,7 +12,8 @@
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="item in list">
+                <tr v-for="(item,index) in list" :key="index">
+                    
                     <td>{{item.num}}</td>
                     <td>{{item.wheel_type}}</td>
                     <td>{{item.program_num}}</td>
